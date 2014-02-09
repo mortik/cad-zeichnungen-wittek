@@ -4,6 +4,7 @@
 
 window.setMinHeight = ->
   offset = $('footer#main').outerHeight()
+  console.log offset
   $('body > .container').css('min-height', $('body').height() - offset)
 
 $(window).on 'orientationchange', setMinHeight
