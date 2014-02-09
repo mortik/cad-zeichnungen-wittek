@@ -1,0 +1,8 @@
+---
+app: petrawittek
+domain: cad-zeichnungen-wittek.de
+user: petrawittek
+protocol: http
+htpasswd_user: petra
+htpasswd_password: FQpHRFcNVHKqU
+

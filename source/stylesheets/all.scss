@@ -1,0 +1,121 @@
+$brand-primary: #1d168b;
+$link-color: $brand-primary;
+
+@import "bootstrap";
+@import "bourbon";
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  height: auto;
+  position: relative;
+  background-image: image-url("bg.png");
+  background-repeat: repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@import "impressum";
+@import "partials/footer";
+
+.modal {
+  img {
+    max-width: 100%;
+  }
+}
+
+.cbox {
+  margin: 20px 0;
+
+  &.cbox-small {
+    margin: 150px 0;
+  }
+
+  .well {
+    box-shadow: 0 0 10px #999;
+    padding: 20px;
+    position: relative;
+    border-radius: 5px;
+    background-color: white;
+    line-height: 30px;
+    background-image: image-url("logo-thumb.png");
+    background-position: right top;
+    background-size: 250px auto;
+    background-repeat: no-repeat;
+    font-size: 16px;
+
+    h1 {
+      margin: 0.67em 0 10px;
+      font-size: 28px;
+      color: #1D168B;
+    }
+
+    h2 {
+      font-size: 22px;
+    }
+
+    h3 {
+      font-size: 18px;
+    }
+
+    p, blockquote {
+      padding-right: 135px;
+
+      img {
+        float: left;
+        max-width: 100%;
+        width: 150px;
+        height: auto;
+        margin-right: 10px;
+        margin-top: 10px;
+      }
+    }
+  }
+  nav {
+    margin-top: 20px;
+    color: $brand-primary;
+  }
+  &.cbox-plain {
+    .well {
+      background-image: none;
+    }
+  }
+}
+
+#contact {
+  dl {
+    dt {
+      width: 20px;
+    }
+    dd {
+      margin-left: 25px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media (max-width: $screen-sm-min) {
+  .cbox {
+    &.cbox-small {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    .well {
+      border-radius: 0;
+    }
+  }
+}
+
+@media (max-width: $screen-xs-min) {
+  .cbox {
+    .well {
+      background-size: 120px auto;
+      p, blockquote {
+        padding-right: 0;
+      }
+    }
+  }
+}

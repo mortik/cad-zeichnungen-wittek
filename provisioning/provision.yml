@@ -1,0 +1,6 @@
+# reckoning setup
+- hosts: all
+  sudo: True
+  roles:
+    - webserver
+    - user

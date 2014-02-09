@@ -1,0 +1,26 @@
+%nav#main-nav.navbar.navbar-default{role: "navigation"}
+  .container-fluid
+    .navbar-header
+      %button.navbar-toggle{type: 'button', data: {toggle: 'collapse', target: '.navbar-ex1-collapse'}}
+        %span.sr-only
+          = I18n.t(:"nav.header.toggle")
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.navbar-brand{href: "/"}
+        CAD Zeichnungen Wittek
+
+    .collapse.navbar-collapse.navbar-ex1-collapse
+      %ul.nav.navbar-nav
+      %ul.nav.navbar-nav.navbar-right
+        %li{class: ('active' if current_page.data.active_page == 'services')}
+          %a{href: "/leistungen"} Leistungen
+
+        %li{class: ('active' if current_page.data.active_page == 'about')}
+          %a{href: "/ueber-mich"} Über mich
+
+        %li{class: ('active' if current_page.data.active_page == 'references')}
+          %a{href: "/referenzen"} Referenzen
+
+        %li{class: ('active' if current_page.data.active_page == 'kontakt')}
+          %a{href: "/kontakt"} Kontakt
