@@ -92,6 +92,9 @@ body {
   dl {
     dt {
       width: 20px;
+      i {
+        vertical-align: bottom;
+      }
     }
     dd {
       margin-left: 25px;
