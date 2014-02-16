@@ -2,6 +2,12 @@
 active_page: home
 ---
 .content#welcome
+  .box.box-1
+    %a{href: "/leistungen"}
+      %span Leistungen
+  .box.box-2
+    %a{href: "/referenzen"}
+      %span Referenzen
   .wrapper
     .card
       Willkommen bei
@@ -15,7 +21,16 @@ active_page: home
         Sie sich über mich und meine Leistungen.
         %br
         %img{src: "#{image_path('me.jpg')}", alt: "Me"}
-        Gern können Sie mich kontaktieren,
+        Gern können Sie mich
         %br
-        wenn Sie noch Fragen haben.
+        kontaktieren, wenn Sie
+        %br
+        noch Fragen haben.
       .clearfix
+
+  .box.box-3
+    %a{href: "/ueber-mich"}
+      %span Über mich
+  .box.box-4
+    %a{href: "/kontakt"}
+      %span Kontakt

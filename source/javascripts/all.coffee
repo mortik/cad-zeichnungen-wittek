@@ -3,11 +3,11 @@
 #= require_tree .
 
 $(document).on 'show.bs.modal', (e) ->
-  $('[data-toggle=popover]').popover()
+  $('[data-toggle=tooltip]').tooltip()
 
 
 $ ->
-  $('[data-toggle=popover]').popover()
+  $('[data-toggle=tooltip]').tooltip()
 
   $('#gallery-modal').on 'show.bs.modal', (e) ->
     $link = $(e.relatedTarget)
