@@ -1,37 +1,21 @@
 ---
 active_page: home
 ---
-.row
-  .col-xs-12.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2.col-lg-6.col-lg-offset-3
-    .cbox.cbox-small
-      .well
-        Willkommen bei
-        %h1
-          CAD-Zeichnungen
-          %br.visible-xs
-          Wittek
-        %p
-          Schauen Sie sich um und informieren Sie sich über mich und meine Leistungen.
-          %img{src: "#{image_path('me.jpg')}", alt: "Me"}
-          Gern können Sie mich kontaktieren, wenn Sie noch Fragen haben.
-        .clearfix
-
-        %hr
-
-        %nav.text-center
-          %a.btn.btn-link{href: '/leistungen'}
-            Leistungen
-          = " | "
-          %a.btn.btn-link{href: '/referenzen'}
-            Referenzen
-          %span.hidden-xs
-            = " | "
-          %br.visible-xs
-          %a.btn.btn-link{href: '/galerie'}
-            Galerie
-          = " | "
-          %a.btn.btn-link{href: '/ueber-mich'}
-            Über mich
-          = " | "
-          %a.btn.btn-link{href: '/kontakt'}
-            Kontakt
+.content#welcome
+  .card
+    .inner
+      Willkommen bei
+      %h1
+        CAD-Zeichnungen
+        %br.visible-xs
+        Wittek
+      %p
+        Schauen Sie sich um und informieren
+        %br
+        Sie sich über mich und meine Leistungen.
+        %br
+        %img{src: "#{image_path('me.jpg')}", alt: "Me"}
+        Gern können Sie mich kontaktieren,
+        %br
+        wenn Sie noch Fragen haben.
+      .clearfix

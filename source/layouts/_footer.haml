@@ -1,12 +1,13 @@
-%footer#main
-  .container
-    .row
-      .col-xs-12.col-sm-4.col-md-4
-        %p.copyright
-          Copyright &copy; 2014
-          = link_to "Petra Wittek", "mailto:info@cad-zeichnungen-wittek.de", target: "_blank"
-      .col-xs-12.col-sm-8.col-md-8
-        %nav.pull-right
-          %a{href: "/impressum"} Impressum
-          = " | "
-          %a{href: "/datenschutz"} Datenschutz
+%footer#footer
+  %nav.navbar.navbar-default{role: "navigation"}
+    .container-fluid
+      .navbar-header
+        %a.navbar-brand.copyright{href: "mailto:info@cad-zeichnungen-wittek.de", target: "_blank"}
+          Copyright &copy; 2014 Petra Wittek
+      .collapse.navbar-collapse.navbar-ex1-collapse
+        %ul.nav.navbar-nav.navbar-right
+          %li{class: ('active' if current_page.data.active_page == 'impressum')}
+            %a{href: "/impressum"} Impressum
+
+          %li{class: ('active' if current_page.data.active_page == 'datenschutz')}
+            %a{href: "/datenschutz"} Datenschutz
