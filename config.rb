@@ -16,6 +16,8 @@ set :markdown, :fenced_code_blocks => true,
                :autolink => true,
                :smartypants => true
 
+sprockets.append_path File.join "#{root}", "bower_components"
+
 activate :deploy do |deploy|
   deploy.user     = "petrawittek"
   deploy.build_before = true
