@@ -7,10 +7,6 @@ server {
 server {
   listen 80;
   server_name {{ domain }};
-{% if htpasswd_user and htpasswd_password %}
-  auth_basic "Restricted";
-  auth_basic_user_file htpasswd;
-{% endif %}
 
   access_log  /var/log/nginx/{{ app }}_access.log;
   error_log  /var/log/nginx/{{ app }}_error.log;

@@ -1,8 +1,6 @@
 ---
-app: petrawittek
+root_user: root
+app: cad-zeichnungen-wittek
 domain: cad-zeichnungen-wittek.de
-user: petrawittek
+user: cad-zeichnungen-wittek
 protocol: http
-htpasswd_user: petra
-htpasswd_password: FQpHRFcNVHKqU
-

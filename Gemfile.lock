@@ -65,8 +65,6 @@ GEM
       middleman-core (>= 3.0.0)
       net-sftp
       ptools
-    middleman-gh-pages (0.0.3)
-      rake (> 0.9.3)
     middleman-livereload (3.1.0)
       em-websocket (>= 0.2.0)
       middleman-core (>= 3.0.2)
@@ -93,7 +91,6 @@ GEM
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
-    rake (10.3.2)
     rb-fsevent (0.9.3)
     rb-inotify (0.9.3)
       ffi (>= 0.5.0)
@@ -131,7 +128,6 @@ DEPENDENCIES
   jquery-middleman (~> 3.0.4)
   middleman (~> 3.2.0)
   middleman-deploy (~> 0.1.4)
-  middleman-gh-pages
   middleman-livereload (~> 3.1.0)
   middleman-syntax (~> 1.2.1)
   nokogiri (~> 1.6.0)

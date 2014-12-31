@@ -1,52 +1,13 @@
 ---
-- name: install webserver packages
-  apt:
-    pkg: "{{ item }}"
-    state: installed
-    update-cache: yes
-  with_items:
-    - nginx-full
-
-- name: enable gzip
-  lineinfile:
-    dest: /etc/nginx/nginx.conf
-    state: present
-    regexp: "^.*({{ item[:20] }})"
-    insertafter: ^http {.*
-    line: "\t{{ item }}"
-  with_items:
-    - gzip on;
-    - gzip_http_version 1.1;
-    - gzip_comp_level 2;
-    - gzip_types text/plain text/css application/x-javascript text/xml application/xml application/xml+rss text/javascript application/javascript application/json;
-    - gzip_disable "msie6";
-  notify:
-    - restart nginx
-
-- name: create htpasswd file
-  file:
-    dest: "/etc/nginx/htpasswd"
-    owner: root
-    group: root
-    mode: 0644
-    state: touch
-  when: '"{{ htpasswd_user }}" != "None" and "{{ htpasswd_password }}" != "None"'
-
-- name: add user to htpasswd
-  lineinfile:
-    dest: "/etc/nginx/htpasswd"
-    state: present
-    regexp: "^({{ htpasswd_user }})"
-    line: "{{ htpasswd_user }}:{{ htpasswd_password }}\n"
-  when: '"{{ htpasswd_user }}" != "None" and "{{ htpasswd_password }}" != "None"'
-
 - name: copy site configuration
   template:
-    src: "{{ protocol }}_vhost.js"
+    src: vhost.j2
     dest: "/etc/nginx/sites-available/{{ app }}"
     owner: root
     group: root
     mode: 0600
+  notify:
+    - restart nginx
 
 - name: symlink site configuration
   file:
@@ -63,3 +24,4 @@
   service:
     name: nginx
     state: started
+    enabled: yes

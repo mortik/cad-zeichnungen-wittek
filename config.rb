@@ -19,10 +19,10 @@ set :markdown, :fenced_code_blocks => true,
 sprockets.append_path File.join "#{root}", "bower_components"
 
 activate :deploy do |deploy|
-  deploy.user     = "petrawittek"
+  deploy.user     = "cad-zeichnungen-wittek"
   deploy.build_before = true
   deploy.method = :rsync
-  deploy.host   = "petrawittek.de"#"cad-zeichnungen-wittek.de"
+  deploy.host   = "cad-zeichnungen-wittek.de"
   deploy.path   = "~/current"
 end
 
