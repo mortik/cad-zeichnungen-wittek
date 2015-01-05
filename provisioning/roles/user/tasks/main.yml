@@ -13,3 +13,10 @@
     path: "/home/{{ user }}/.ssh/authorized_keys"
     state: present
     manage_dir: no
+
+- name: change ownership of ssh directory
+  file:
+    path: "/home/{{ user }}/.ssh"
+    owner: "{{ user }}"
+    group: "{{ user }}"
+  tags: user
