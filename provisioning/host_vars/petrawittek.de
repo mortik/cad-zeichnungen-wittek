@@ -1,7 +1,0 @@
----
-app: petrawittek
-domain: petrawittek.de
-user: petrawittek
-protocol: http
-htpasswd_user: petra
-htpasswd_password: FQpHRFcNVHKqU

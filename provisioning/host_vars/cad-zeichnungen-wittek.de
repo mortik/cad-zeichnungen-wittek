@@ -1,6 +1,0 @@
----
-root_user: root
-app: cad-zeichnungen-wittek
-domain: cad-zeichnungen-wittek.de
-user: cad-zeichnungen-wittek
-protocol: http

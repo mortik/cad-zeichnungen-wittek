@@ -1,7 +1,0 @@
-# reckoning setup
-- hosts: all
-  user: "{{ root_user }}"
-  sudo: True
-  roles:
-    - webserver
-    - user
