@@ -1,6 +1,6 @@
 Encoding.default_external = 'utf-8'
 
-activate :livereload
+# activate :livereload
 activate :directory_indexes
 activate :syntax
 
@@ -17,14 +17,6 @@ set :markdown, :fenced_code_blocks => true,
                :smartypants => true
 
 sprockets.append_path File.join "#{root}", "bower_components"
-
-activate :deploy do |deploy|
-  deploy.user     = "cad-zeichnungen-wittek"
-  deploy.build_before = true
-  deploy.method = :rsync
-  deploy.host   = "cad-zeichnungen-wittek.de"
-  deploy.path   = "~/current"
-end
 
 configure :build do
   activate :minify_css
