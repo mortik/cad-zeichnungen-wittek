@@ -1,6 +1,6 @@
 Encoding.default_external = 'utf-8'
 
-# activate :livereload
+activate :livereload
 activate :directory_indexes
 activate :syntax
 
